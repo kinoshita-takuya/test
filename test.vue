@@ -34,12 +34,6 @@ import { defineComponent } from 'vue'
 </script>
 
 <style>
-:root {
-  --success-green: #2aa36a;
-  --info-blue: #2a79c2;
-  --error-red: #eb4e2c;
-  --warning-yellow: #ffc600;
-}
 .vue-alert * {
   font-family: Arial;
 }
