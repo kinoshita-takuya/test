@@ -1,4 +1,4 @@
-<script lang="ts">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+<script lang="ts">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 import { defineComponent } from 'vue'
   methods: {
     showAlert(alertType: string, alertMessage: string, alertHeader?: string, options?: { iconSize?: number, iconType?: string , position?: string}): void {
