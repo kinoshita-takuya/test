@@ -1,6 +1,36 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-
+  methods: {
+    showAlert(alertType: string, alertMessage: string, alertHeader?: string, options?: { iconSize?: number, iconType?: string , position?: string}): void {
+      this.alertType = alertType
+      this.header = alertHeader?alertHeader:alertType.toUpperCase()
+      this.message = alertMessage
+      if(options) {
+        this.position = options.position?options.position:"top right"
+        this.iconSize = options.iconSize?options.iconSize:35
+        this.iconType = options.iconType==="regular"?"regular":"solid"
+      } else {
+        this.iconType = "solid"
+      }
+      setTimeout(() =>{ 
+        this.status = true
+      }, 50)
+      if(this.closeIn) {
+        setTimeout(() => this.closeAlert(), this.closeIn)
+      }
+    },
+    closeAlert() {
+      this.isHide = true
+      setTimeout(() => {
+        this.isHide = false
+        this.status = false
+        this.iconSize = 40
+        this.header = ''
+        this.message = ''
+      }, this.duration)
+    }
+  },
+});
 </script>
 
 <style>
