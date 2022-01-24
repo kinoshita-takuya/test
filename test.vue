@@ -1,38 +1,5 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Icon from '@/icons/Icon.vue'
-interface DataInterface {
-  isHide: Boolean;
-  status: Boolean;
-  iconSize: number;
-  position: string;
-  alertType: string;
-  iconType: string;
-  header: string;
-  message: string;
-}
-export default defineComponent({
-  name: 'VueBasicAlert', 
-  props: {
-    width: {type: Number},
-    duration: {type: Number, default: 300},
-    closeIn: {type: Number, default: null},
-  },
-  components: {
-    Icon
-  },
-  data(): DataInterface {
-    return {
-      position: "top right",
-      status: false,
-      isHide: false,
-      iconSize: 35,
-      iconType: 'solid',
-      alertType: 'info',
-      header: 'Some Information',
-      message: 'This is the information of something you may know',
-    };
-  },
   methods: {
     showAlert(alertType: string, alertMessage: string, alertHeader?: string, options?: { iconSize?: number, iconType?: string , position?: string}): void {
       this.alertType = alertType
