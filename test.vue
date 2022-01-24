@@ -1,16 +1,5 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-  methods: {
-      this.alertType = alertType
-      this.header = alertHeader?alertHeader:alertType.toUpperCase()
-      this.message = alertMessage
-      if(options) {
-        this.position = options.position?options.position:"top right"
-        this.iconSize = options.iconSize?options.iconSize:35
-        this.iconType = options.iconType==="regular"?"regular":"solid"
-      } else {
-        this.iconType = "solid"
-      }
       setTimeout(() =>{ 
         this.status = true
       }, 50)
