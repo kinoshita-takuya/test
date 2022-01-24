@@ -1,24 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-      setTimeout(() =>{ 
-        this.status = true
-      }, 50)
-      if(this.closeIn) {
-        setTimeout(() => this.closeAlert(), this.closeIn)
-      }
-    },
-    closeAlert() {
-      this.isHide = true
-      setTimeout(() => {
-        this.isHide = false
-        this.status = false
-        this.iconSize = 40
-        this.header = ''
-        this.message = ''
-      }, this.duration)
-    }
-  },
-});
+
 </script>
 
 <style>
