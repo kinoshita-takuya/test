@@ -1,7 +1,6 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
   methods: {
-    showAlert(alertType: string, alertMessage: string, alertHeader?: string, options?: { iconSize?: number, iconType?: string , position?: string}): void {
       this.alertType = alertType
       this.header = alertHeader?alertHeader:alertType.toUpperCase()
       this.message = alertMessage
